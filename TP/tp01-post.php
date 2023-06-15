@@ -23,16 +23,16 @@
 // Le prix HT doit être récupéré directement sur le formulaire
 
 // Ternaire = if, else sur une seule ligne
-// if(!empty($_GET['prixht'])){
-//     $prixHT = $_GET['prixht'];
+// if(!empty($_POST['prixht'])){
+//     $prixHT = $_POST['prixht'];
 // } else {
 //     $prixHT = null;
 // }
 
 // Ternaire :
 // laVariable = (condition a tester) ? valeur si vraie : valeur si faux
-$prixHT = (!empty($_GET['prixht'])) ? $_GET['prixht'] : null;
-// $prixHT = $_GET['prixht'];
+$prixHT = (!empty($_POST['prixht'])) ? $_POST['prixht'] : null;
+// $prixHT = $_POST['prixht'];
 $TVA = 20;
 $montantTVA = $prixHT * $TVA/100;
 $prixTTC = $prixHT + $montantTVA;
@@ -52,7 +52,7 @@ $prixTTC = $prixHT + $montantTVA;
             echo "<p>Le prix HT est = $prixHT €, le prix TTC est = $prixTTC €, le montant total de la TVA est = $montantTVA €</p>";
         }
     ?>
-    <form action="#" method="get">
+    <form action="#" method="POST">
         <label for="prix">Entrez un prix HT :</label>
         <input type="number" name="prixht" id="prix">
         <input type="submit" value="Calculer !">
