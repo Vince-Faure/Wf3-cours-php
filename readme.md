@@ -1,14 +1,18 @@
 # Commandes GITHUB
 
-git init // A faire qu'une fois, lors de l'initialisation du projet
-git add * // A faire a chaque modification qu'on veut mettre à jour
-git commit -m "NOM DU COMMIT" // = Ce que vous venez d'apporter comme modification. A faire a chaque mise à jour
-git branch -M main // A faire qu'une seule fois
-git remote add origin urlDeVotreRepo // A faire une seule fois
-git push -u origin main // A faire a chaque mise à jour
+Les commandes suivantes sont utiles lors de l'utilisation de GitHub :
 
+1. `git init` : À faire une seule fois, lors de l'initialisation du projet.
+2. `git add *` : À faire à chaque modification que vous souhaitez mettre à jour.
+3. `git commit -m "NOM DU COMMIT"` : Utilisé pour enregistrer les modifications apportées. À faire à chaque mise à jour.
+4. `git branch -M main` : À faire une seule fois pour renommer la branche principale en "main".
+5. `git remote add origin urlDeVotreRepo` : À faire une seule fois pour ajouter l'URL de votre référentiel distant.
+6. `git push -u origin main` : À faire à chaque mise à jour pour envoyer les modifications vers le référentiel distant.
 
---- Lorsque vous voulez mettre à jour votre repo github
-git add * 
-git commit -m "NOM DU COMMIT"
-git push -u origin main 
+---
+
+Lorsque vous souhaitez mettre à jour votre référentiel GitHub, suivez les étapes suivantes :
+
+1. `git add *`
+2. `git commit -m "NOM DU COMMIT"`
+3. `git push -u origin main`
