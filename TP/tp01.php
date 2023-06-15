@@ -20,8 +20,8 @@
 
 */
 $prixHt = 10;
-$tva = 12;
-$prixTtc = $prixHT + $tva;
+$tva = 2;
+$prixTtc = $prixHt + $tva;
 
 echo(" Le prix HT est = $prixHt, le prix TTC est = $prixTtc, le montant total de la TVA est = $tva");
 
