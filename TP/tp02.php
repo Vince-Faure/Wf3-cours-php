@@ -10,7 +10,7 @@ Exemple :
 
  affichera 10(5*2)
 
-*/
+
 
 
 $seuil = 10;
@@ -19,7 +19,21 @@ $calc= $number*2;
 
 if ($calc > $seuil){
 echo "Vous avez dépassé le seuil : $seuil";
-}else{ echo " $seuil est inferieur à  $calc";};
+}else{ echo " $seuil est inferieur à  $calc";};*/
+
+/* correction*/
+function calculDouble($valeur, $seuil) {
+    if ($valeur < $seuil) {
+        return $valeur * 2;
+    }
+    return $valeur;
+}
+
+$valeur = 20;
+$seuil = 10;
+
+echo "Le seuil est : $seuil <br>";
+echo 'La valeur est : ' . calculDouble($valeur, $seuil);
 
 
 ?>
