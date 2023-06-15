@@ -19,6 +19,10 @@ if($varA === $varB){
 $nb1 = 15;
 $nb2 = 12;
 
-if($nb1 > $nb2){
+if($nb1 > $nb2 && $nb1 > 18){
     echo "Le nombre 1 est supérieur au nombre 2 <br/>";
+} elseif($nb1 === $nb2){
+    echo "Le nombre 1 est strictement égal au nombre 2 <br/>";
+} else {
+    echo "On n'entre pas dans la condition <br>";
 }
