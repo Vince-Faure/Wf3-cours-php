@@ -19,6 +19,10 @@
     Le prix HT est = 10€, le prix TTC est = 12€, le montant total de la TVA est = 2€
 
 */
-$prixHT = 10;
+$prixHt = 10;
+$tva = 12;
+$prixTtc = $prixHT + $tva;
+
+echo(" Le prix HT est = $prixHt, le prix TTC est = $prixTtc, le montant total de la TVA est = $tva");
 
 
