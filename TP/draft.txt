@@ -1,0 +1,12 @@
+    // On entre dans la condition si la variable est vide
+    if(empty($varB)){
+        // Faire quelque chose
+    }else{
+
+    }
+
+    <form action="#" method="POST">
+        <label for="prix">Entrez un prix HT :</label>
+        <input type="number" name="prixht" id="prix">
+        <input type="submit" value="Calculer !">
+    </form>
