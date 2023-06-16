@@ -1,4 +1,4 @@
-<?php 
+<?php
 /*
     Vous allez ajouter le code HTML de base pour une page web (!)
     Vous allez ajouter un titre H1 (Veuillez renseigner les informations)
@@ -29,7 +29,7 @@
 
 $name = (!empty($_POST['name'])) ? $_POST['name'] : null;
 $firstName = (!empty($_POST['firstName'])) ? $_POST['firstName'] : null;
-$age = (!empty($_POST['age'])) ? $_POST['age'] :null;
+$age = (!empty($_POST['age'])) ? $_POST['age'] : null;
 
 
 
@@ -38,59 +38,48 @@ $age = (!empty($_POST['age'])) ? $_POST['age'] :null;
 
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
 
-<?php
 
-
-
-// On entre dans la condition si la variable est vide
-
-
-if (!empty ($name) && !empty ($firstName) && !empty ($age)){
-
-setcookie('Nom', $name,time()+3600);
-setcookie("Prenom", $firstName,time()+3600);
-setcookie('Age', $age,time()+3600);
-
-echo "ok";
-}else{
-if ($name == null) {
-    echo ("veuillez renseigner le champ 'Nom'");
-} else {
-    setcookie('Nom', $name,time()+3600);
-};
-
-if ($firstName == null) {
-    echo ("Veuillez renseigner le champ 'Prenom");
-} else {
-    setcookie("Prenom", $firstName,time()+3600);
-};
-if ($age == null) {
-
-    echo ("Veuillez renseigner le champ 'age'");
-} else {
-    setcookie('Age', $age,time()+3600);
-};
-
-}
-
-?>
-
-
-        <form action="#" method="POST">
-        <label for="prix"><h1>Bonjour veuillez entrer vos informations :</h1></label>
-        <input type="text" name="name" id="name" placeholder="Nom"><br>
-        <input type="text" name="firstName" id="firstName" placeholder="Prénom"> <br>
-        <input type="number" name="age" id="age" placeholder="Age"> <br>
+    <form action="#" method="POST">
+        <label for="prix">
+            <h1>Bonjour veuillez entrer vos informations :</h1>
+        </label>
+        <input type="text" name="name" id="name" placeholder="Nom">
+        <?php
+        if (empty( $name)) {
+            echo ("<br> veuillez renseigner le champ 'Nom'");
+        } else {
+            setcookie('Nom', $name, time() + 3600);
+        } ?>
+        <br>
+        <input type="text" name="firstName" id="firstName" placeholder="Prénom">
+        <?php if (empty ($firstName) ) {
+            echo ("<br> Veuillez renseigner le champ 'Prenom");
+        } else {
+            setcookie("Prenom", $firstName, time() + 3600);
+        }
+        ?>
+        <br>
+        <input type="number" name="age" id="age" placeholder="Age">
+        <?php
+        if (empty ($age)) {
+            echo (" <br> Veuillez renseigner le champ 'age'");
+        } else {
+            setcookie('Age', $age, time() + 3600);
+        }  ?>
+        <br>
         <input type="submit" value="Valider">
     </form>
 
 
 </body>
+
 </html>
