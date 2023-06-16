@@ -1,17 +1,6 @@
 <?php
 /*
-    Créer un petit programme qui permet de saisir un prix HT
-    et d'afficher le prix TTC correspondant
-
-
-    // INFORMATIONS
-    - Le prix HT, doit être renseigné directement sur le formulaire sur la page (POST)
-
-    - Vous allez faire le calcul et stocker le montant TTC sur une variable
-
-    - Vous allez faire un echo affichant :
-        Le prix HT est = (ajouter la variable du prixHT), le prix TTC est = (ajouter la variable du prix TTC), le montant total de la TVA est = (ajoutez le montant de la TVA)
-
+   
     - Taux TVA = 20%
 
     // EXEMPLE
@@ -38,6 +27,8 @@ $montantTVA = $prixHT * $TVA/100;
 $prixTTC = $prixHT + $montantTVA;
 
 ?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
