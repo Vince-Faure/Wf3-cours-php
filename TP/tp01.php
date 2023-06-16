@@ -21,8 +21,12 @@
 */
 $prixHt = 10;
 $tva = 2/100;
-$prixTtc= $prixHt+($prixHt * $tva);
+/*définir une constante pour la TVA*/
 
-echo(" Le prix HT est = $prixHt, le prix TTC est = $prixTtc, le montant total de la TVA est = $tva");
+define('TVA', 20/100);
+
+$prixTtc= $prixHt+($prixHt * TVA);
+
+echo(" Le prix HT est = $prixHt, le prix TTC est = $prixTtc, le montant total de la TVA est =" .TVA);
 
 
